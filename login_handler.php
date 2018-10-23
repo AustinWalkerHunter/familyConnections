@@ -1,18 +1,18 @@
 <?php session_start();
+require_once 'Dao.php';
+$dao = new Dao();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-require_once 'Dao.php';
-$loginCheck = new Dao();
-$loginCheck->checkCredentials($username, $password);
+$loginCheck = $dao->checkCredentials($username, $password);
 
-if ($loginCheck === 1) {
+if ($loginCheck) {
     $_SESSION['logged_in'] = true;
     header('Location: index.php');
     exit;
 }
 $_SESSION['logged_in'] = false;
-$_SESSION['message'] = "Username or password invalid";
+$_SESSION['message'] = "Uh oh! The username and password you entered did not match our records. Please double-check and try again.";
 header('Location: login.php');
 exit;

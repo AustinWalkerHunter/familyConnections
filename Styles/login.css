@@ -34,7 +34,13 @@ hr{
     color: black;
 }
 .errorMessage{
-    background-color: coral;
+    padding: 5px 0 5px 0;
+    border-radius: 7px;
+    background-color: #ffa64d;
+    text-align: center;
+    width: 75%;
+    margin-left: 12%;
+    display: inline-block;
 }
 .checkbox{
     font-weight: normal;

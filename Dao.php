@@ -17,15 +17,12 @@ class Dao
     public function checkCredentials($username, $password)
     {
         $conn = $this->getConnection();
-        $saveQuery= "SELECT EXISTS (SELECT * FROM user WHERE username = :username AND password = :password)";
-        $q = $conn->prepare($saveQuery);
+        $getQuery= "SELECT * FROM user WHERE username = :username AND password = :password";
+        $q = $conn->prepare($getQuery);
         $q->bindParam(":username", $username);
         $q->bindParam(":password", $password);
-        $result = $q->execute();
+        $q->execute();
+        return reset($q->fetchAll());
 
-        if($result){
-            return 1;
-        }
-            return 0;
     }
 }
