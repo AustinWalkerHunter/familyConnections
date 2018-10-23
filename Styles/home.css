@@ -1,0 +1,22 @@
+#content {
+    margin-top: 0;
+    margin-right: 10px;
+    height: 100%;
+    float: right;
+    width: 72.7083333%;
+}
+#sidebar {
+    border-right-color: #e8e8e8;
+    border-right-style: solid;
+    border-right-width: 2px;
+    margin-top: 0;
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
+    width: 22.7083333%;
+    position: absolute;
+    height: fit-content;
+    text-align: center;
+}
+

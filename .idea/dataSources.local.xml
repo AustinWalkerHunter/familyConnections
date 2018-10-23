@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="heroku_e0406c39d6368ec@us-cdbr-iron-east-01.cleardb.net" uuid="a891b4a1-afe0-4a5e-893e-f6f3a3a191ee">
+      <database-info product="MySQL" version="5.5.56-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>b663b02221aaf3</user-name>
+      <introspection-schemas>*:heroku_e0406c39d6368ec</introspection-schemas>
+    </data-source>
+  </component>
+</project>
