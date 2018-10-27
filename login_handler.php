@@ -4,10 +4,11 @@ $dao = new Dao();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+$guest = $_POST['guest'];
 
 $loginCheck = $dao->checkCredentials($username, $password);
 
-if ($loginCheck) {
+if ($loginCheck || $guest) {
     $_SESSION['logged_in'] = true;
     header('Location: index.php');
     exit;

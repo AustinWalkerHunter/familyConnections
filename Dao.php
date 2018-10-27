@@ -17,12 +17,30 @@ class Dao
     public function checkCredentials($username, $password)
     {
         $conn = $this->getConnection();
-        $getQuery= "SELECT * FROM user WHERE username = :username AND password = :password";
+        $getQuery= "SELECT 1 FROM user WHERE username = :username AND password = :password";
         $q = $conn->prepare($getQuery);
         $q->bindParam(":username", $username);
         $q->bindParam(":password", $password);
         $q->execute();
         return reset($q->fetchAll());
+    }
 
+    public function createNewAccount($username, $password, $email){
+        $conn = $this->getConnection();
+        $getQuery= "Insert into user (username, password, email) VALUES (username = :username, password = :password, email = :email)";
+        $q = $conn->prepare($getQuery);
+        $q->bindParam(":username", $username);
+        $q->bindParam(":password", $password);
+        $q->bindParam(":email", $email);
+        $q->execute();
+    }
+
+    public function checkAvailability($username){
+        $conn = $this->getConnection();
+        $getQuery= "SELECT 1 FROM user WHERE username = :username";
+        $q = $conn->prepare($getQuery);
+        $q->bindParam(":username", $username);
+        $q->execute();
+        return reset($q->fetchAll());
     }
 }

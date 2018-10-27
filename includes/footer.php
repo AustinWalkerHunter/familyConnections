@@ -1,3 +1,3 @@
 <div id="footer">
-    <p>Family Connections &copy</p>
+    <p>&copy 2018 Family Connections</p>
 </div>

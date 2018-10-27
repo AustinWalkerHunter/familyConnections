@@ -1,6 +1,7 @@
 <title><?php print $PAGE_TITLE;?></title>
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="../Resources/Images/favicon-32x32.png" sizes="32x32" />
+<link href="https://fonts.googleapis.com/css?family=Cherry+Swash" rel="stylesheet">
 <?php if ($CURRENT_PAGE == "Home") { ?>
     <link rel="stylesheet" href="../Styles/home.css">
     <link rel="stylesheet" href="../Styles/mainStyles.css">
