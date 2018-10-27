@@ -25,19 +25,21 @@ class Dao
         return reset($q->fetchAll());
     }
 
-    public function createNewAccount($username, $password, $email){
+    public function createNewAccount($username, $email, $password)
+    {
         $conn = $this->getConnection();
-        $getQuery= "Insert into user (username, password, email) VALUES (username = :username, password = :password, email = :email)";
-        $q = $conn->prepare($getQuery);
+        $saveQuery= "INSERT INTO user (username, email, password) VALUES (:username, :email, :password)";
+        $q = $conn->prepare($saveQuery);
         $q->bindParam(":username", $username);
         $q->bindParam(":password", $password);
         $q->bindParam(":email", $email);
         $q->execute();
     }
 
-    public function checkAvailability($username){
+    public function checkAvailability($username)
+    {
         $conn = $this->getConnection();
-        $getQuery= "SELECT 1 FROM user WHERE username = :username";
+        $getQuery= "SELECT * FROM user WHERE username = :username";
         $q = $conn->prepare($getQuery);
         $q->bindParam(":username", $username);
         $q->execute();

@@ -3,20 +3,20 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
     header('Location: login.php');
     exit;
 }
-include("includes/a_config.php");?>
+include_once("includes/a_config.php");?>
 <!DOCTYPE html>
 <head>
-    <?php include("includes/header.php"); ?>
+    <?php include_once("includes/header.php"); ?>
 </head>
 <body>
 <div id="wrapper">
     <!-- the header and navigation -->
     <div id="header">
-        <?php include("includes/navigation.php"); ?>
+        <?php include_once("includes/navigation.php"); ?>
     </div>
     <!-- the sidebar -->
     <div id="sidebar">
-        <?php include("includes/sidebar.php"); ?>
+        <?php include_once("includes/sidebar.php"); ?>
     </div>
     <!-- the content -->
     <div id="content">
@@ -42,7 +42,7 @@ include("includes/a_config.php");?>
         </p>
     </div>
     <!-- the footer -->
-    <?php include("includes/footer.php"); ?>
+    <?php include_once("includes/footer.php"); ?>
 </div>
 </body>
 
