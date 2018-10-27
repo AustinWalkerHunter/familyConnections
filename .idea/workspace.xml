@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29162f27-f0af-4383-a7c5-800735b45480" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dao.php" beforeDir="false" afterPath="$PROJECT_DIR$/Dao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Styles/mainStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/mainStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/login_handler.php" afterDir="false" />
-    </list>
+    <list default="true" id="29162f27-f0af-4383-a7c5-800735b45480" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
