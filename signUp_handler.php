@@ -1,6 +1,6 @@
 <?php session_start();
-require_once 'Dao.php';
-$dao = new Dao();
+require_once 'login_Dao.php';
+$dao = new login_Dao();
 
 $username = $_POST['signUp-username'];
 $email = $_POST['signUp-email'];

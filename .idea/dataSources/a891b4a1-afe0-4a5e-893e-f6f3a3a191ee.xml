@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="heroku_e0406c39d6368ec@us-cdbr-iron-east-01.cleardb.net">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.9">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.11">
     <root id="1">
       <ServerVersion>5.5.56</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>

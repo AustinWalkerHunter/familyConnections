@@ -1,10 +1,11 @@
 html,body {
     height: 95%;
     position: relative;
+    background-color: #f5f6f7;
 }
 #wrapper{
     width: 80%;
-    background-color: white;
+    background-color: transparent;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: auto;
     margin-left: auto;
@@ -65,7 +66,7 @@ button.guest{
 }
 button {
     font-size: 15px;
-    background-color: indianred;
+    background-color: #4267b2;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -151,4 +152,4 @@ span.pass {
     box-shadow: 1px 1px 3px #000;
 }
 
-.close:hover { background: indianred; }
+.close:hover { background: #4267b2; }

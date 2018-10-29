@@ -1,6 +1,6 @@
 <?php session_start();
-require_once 'Dao.php';
-$dao = new Dao();
+require_once 'login_Dao.php';
+$dao = new login_Dao();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -10,6 +10,12 @@ $loginCheck = $dao->checkCredentials($username, $password);
 
 if ($loginCheck || $guest) {
     $_SESSION['logged_in'] = true;
+    if($loginCheck){
+        $_SESSION['username'] = $username;
+    }
+    else{
+        $_SESSION['guest'] = true;
+    }
     header('Location: index.php');
     exit;
 }

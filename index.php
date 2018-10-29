@@ -1,8 +1,14 @@
 <?php session_start();
+$message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
+unset($_SESSION['message']);
+
 if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
     header('Location: login.php');
     exit;
 }
+
+//echo "<pre>" . print_r($_SESSION,1) . "</pre>";
+
 include_once("includes/a_config.php");?>
 <!DOCTYPE html>
 <head>
@@ -15,11 +21,38 @@ include_once("includes/a_config.php");?>
         <?php include_once("includes/navigation.php"); ?>
     </div>
     <!-- the sidebar -->
-    <div id="sidebar">
-        <?php include_once("includes/sidebar.php"); ?>
+    <div id="leftSidebar">
+        <?php include("includes/leftSidebar.php"); ?>
     </div>
+
+    <div id="rightSidebar">
+        <?php include("includes/rightSidebar.php"); ?>
+    </div>
+
     <!-- the content -->
     <div id="content">
+
+        <!--messages-->
+        <?php if(!empty($message)) { ?>
+        <div class="message <?php echo isset($_SESSION['validated']) ? $_SESSION['validated'] : '';?>"><?php
+            echo $message; ?></div>
+        <?php  }
+        unset($_SESSION['messages']);
+        ?>
+
+
+        <div class="createPost">
+            <ul class="postType">
+                <li><button class="postText">Make Post</button></li>
+                <li> | </li>
+                <li><button class="postText">Meet-Up</button></li>
+            </ul>
+            <hr/>
+            <form method="post" action="post_handler.php">
+                <input onkeypress="return event.keyCode != 13;" type="text" placeholder="What's on your mind?" id="postText" name="postText">
+                <button class="postButton" type="submit">Post!</button>
+            </form>
+        </div>
         <p> Lorem ipsum dolor sit amet, dolores urbanitas te per, tibique posidonium in vel. Possim tritani diceret in has, eum liber oporteat no. At mei dictas admodum, duo ut viris scaevola consequat, mea an errem comprehensam. Definiebas scriptorem appellantur per id, ius ut illud summo repudiare. Nullam ridens vix te. Evertitur intellegam disputando vix ad, ea labitur meliore has.
 
             Singulis petentium pri et. Pri habeo affert eripuit at. Vis ei rationibus sententiae reprimique. Eum mutat meliore fabellas id, pri tamquam labores prodesset cu.
@@ -41,6 +74,7 @@ include_once("includes/a_config.php");?>
             Brute bonorum labores mea ei, mundi legendos sadipscing pro ex, pro laoreet perfecto pertinacia ne. Quodsi verear voluptua ea eam. Mei in offendit adipiscing, ad cum graeco legimus sententiae, ex odio semper mea. Suas wisi atqui eu sea, an dicta alterum accumsan sit. Case lorem possit et pro, mei malorum recteque te. Solet mucius dolores te per, eos movet zril lobortis at.
         </p>
     </div>
+
     <!-- the footer -->
     <?php include_once("includes/footer.php"); ?>
 </div>

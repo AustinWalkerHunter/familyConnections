@@ -1,5 +1,5 @@
 <?php
-class Dao
+class login_Dao
 {
     private $host = "us-cdbr-iron-east-01.cleardb.net";
     private $db = "heroku_e0406c39d6368ec";
