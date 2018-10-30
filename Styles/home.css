@@ -54,17 +54,18 @@ button.postText{
     cursor: pointer;
     width: 20%;
 }
-input[type=text]{
+textarea{
     background-color:transparent;
     color: black;
-    width: 75%;
+    width: 95%;
     display: block;
     border: none;
-    margin: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
     box-sizing: border-box;
     outline: none;
     font-size: 20px;
-    overflow: hidden;
+    resize: none;
 }
 button.postButton{
     font-size: 15px;
@@ -85,3 +86,4 @@ button:hover{
 form{
     margin-bottom: 0;
 }
+

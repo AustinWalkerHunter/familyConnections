@@ -1,6 +1,6 @@
 <?php
 switch ($_SERVER["SCRIPT_NAME"]) {
-    case "/member.php":
+    case "/family.php":
         $CURRENT_PAGE = "Member";
         $PAGE_TITLE = "Members";
         break;
