@@ -2,7 +2,7 @@
 require_once 'post_Dao.php';
 $dao = new post_Dao();
 
-$postText = $_POST['postText'];
+$content = $_POST['content'];
 
 $badForm = false;
 
@@ -12,10 +12,10 @@ if ($_SESSION['guest'] == true) {
     $badForm = true;
 }
 
-if(empty($postText)){
+if(empty($content)){
     if ($_SESSION['guest'] == true) {
         $_SESSION['message']= "This feature is not available for guests. Please
-    sign in to make a post";
+        sign in or register to make a post.";
         $badForm = true;
     }
     else
@@ -29,10 +29,9 @@ if($badForm){
     exit;
 }
 
+$dao->savePost($content);
 $_SESSION['message'] = "Successfully posted!";
 $_SESSION['validated'] = 'good';
-
-$dao->savePost($postText);
 
 header('Location: index.php');
 exit;

@@ -5,4 +5,12 @@ $(function(){
         this.style.height = 'auto';
         this.style.height = (this.scrollHeight) + 'px';
     });
+
+
 });
+
+setTimeout(function(){
+    $(".message").fadeOut(2000, function(){
+        $(this).remove();
+    });
+}, 5000);

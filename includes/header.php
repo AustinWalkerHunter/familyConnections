@@ -21,6 +21,11 @@
     <link rel="stylesheet" href="../Styles/mainStyles.css">
 <?php } ?>
 
+<?php if ($CURRENT_PAGE == "Photos") { ?>
+    <link rel="stylesheet" href="../Styles/member.css">
+    <link rel="stylesheet" href="../Styles/mainStyles.css">
+<?php } ?>
+
 <?php if ($CURRENT_PAGE == "Login") { ?>
     <link rel="stylesheet" href="../Styles/login.css">
 <?php } ?>

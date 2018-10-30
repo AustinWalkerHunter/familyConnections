@@ -14,11 +14,11 @@ class post_Dao
         return $conn;
     }
 
-    public function savePost($textPost){
+    public function savePost($content){
         $conn = $this->getConnection();
-        $saveQuery= "INSERT INTO posts (content) VALUES (:textPost)";
+        $saveQuery= "INSERT INTO posts (content) VALUE (:content)";
         $q = $conn->prepare($saveQuery);
-        $q->bindParam(":textPost", $textPost);
+        $q->bindParam(":content", $content);
         $q->execute();
     }
 }

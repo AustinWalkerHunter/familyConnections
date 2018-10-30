@@ -79,10 +79,10 @@ li {
 }
 
 .bad{
-    color: white;
     padding: 5px 0 5px 0;
     border-radius: 7px;
-    background-color: #B90000;
+    color: #D8000C;
+    background-color: #FFD2D2;
     text-align: center;
     width: 75%;
     margin-left: 12%;
@@ -90,10 +90,10 @@ li {
     margin-bottom: 10px;
 }
 .good{
-    color: white;
     padding: 5px 0 5px 0;
     border-radius: 7px;
-    background-color: #228B22;
+    color: #4F8A10;
+    background-color: #c4e7ac;
     text-align: center;
     width: 75%;
     margin-left: 12%;

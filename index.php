@@ -41,13 +41,13 @@ include_once("includes/a_config.php");?>
         ?>
         <div class="createPost">
             <ul class="postType">
-                <li><button class="postText">Post</button></li>
+                <li><button class="postBtn">Post</button></li>
                 <li> | </li>
-                <li><button class="postText">Meet-Up</button></li>
+                <li><button class="postBtn">Meet-Up</button></li>
             </ul>
             <hr/>
             <form method="post" action="post_handler.php">
-                <textarea autocomplete="off" type="text" placeholder="What's on your mind?" id="postText" name="postText"></textarea>
+                <textarea  placeholder="What's on your mind?" name="content"></textarea>
                 <button class="postButton" type="submit">Post!</button>
             </form>
         </div>

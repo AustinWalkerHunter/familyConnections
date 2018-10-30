@@ -12,6 +12,10 @@ switch ($_SERVER["SCRIPT_NAME"]) {
         $CURRENT_PAGE = "Login";
         $PAGE_TITLE = "Login";
         break;
+    case "/photos.php":
+        $CURRENT_PAGE = "Photos";
+        $PAGE_TITLE = "Photos";
+        break;
     default:
         $CURRENT_PAGE = "Home";
         $PAGE_TITLE = "Family Connections";
