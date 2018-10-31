@@ -1,12 +1,12 @@
 html,body {
     height: 95%;
     position: relative;
-    background-color: #f5f6f7;
+    background-color: white;
 }
 #wrapper{
     width: 80%;
     background-color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin-right: auto;
     margin-left: auto;
     min-height:100%;
@@ -26,22 +26,35 @@ h2{
     text-align: center;
     margin-bottom: -1%;
 }
+.modalDialog h2{
+    text-align: center;
+    margin-top: 1%;
+}
 hr{
     margin-bottom: 5%;
+    width: 100%;
+}
+.hrError{
+    margin-bottom: 1%;
+}
+
+.modalDialog hr{
+    margin-bottom: 1%;
     width: 100%;
 }
 #header {
     margin-top: 20px;
     text-align: center;
     text-decoration: none;
-    font-family: 'Cherry Swash', cursive;
+    font-family: 'Comfortaa', cursive;
     font-size: 30px;
     color: black;
 }
 .errorMessage{
     padding: 5px 0 5px 0;
     border-radius: 7px;
-    background-color: #ffa64d;
+    color: #D8000C;
+    background-color: #FFD2D2;
     text-align: center;
     width: 75%;
     margin-left: 12%;
@@ -103,7 +116,9 @@ span.pass {
     bottom: 0;
     width: 100%;
 }
-
+.modalDialog button{
+    width: available;
+}
 .modalDialog {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
@@ -126,9 +141,9 @@ span.pass {
 }
 
 .modalDialog > div {
-    width: 400px;
+    width: 40%;
     position: relative;
-    margin: 10% auto;
+    margin: 3% auto;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
     background: #fff;

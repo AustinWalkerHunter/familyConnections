@@ -1,7 +1,8 @@
 <title><?php print $PAGE_TITLE;?></title>
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="../Resources/Images/favicon-32x32.png" sizes="32x32" />
-<link href="https://fonts.googleapis.com/css?family=Cherry+Swash" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Nunito" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/script.js"></script>
 <?php if ($CURRENT_PAGE == "Home") { ?>

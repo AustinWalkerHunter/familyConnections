@@ -16,9 +16,14 @@ class post_Dao
 
     public function savePost($content){
         $conn = $this->getConnection();
-        $saveQuery= "INSERT INTO posts (content) VALUE (:content)";
+        $saveQuery= "INSERT INTO posts (content, date_entered) VALUE (:content, CURRENT_TIMESTAMP)";
         $q = $conn->prepare($saveQuery);
         $q->bindParam(":content", $content);
         $q->execute();
+    }
+
+    public function getPosts(){
+        $conn = $this->getConnection();
+        return $conn->query("select user_id, content, date_entered from posts order by date_entered desc", PDO::FETCH_ASSOC);
     }
 }

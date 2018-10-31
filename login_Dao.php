@@ -17,7 +17,7 @@ class login_Dao
     public function checkCredentials($username, $password)
     {
         $conn = $this->getConnection();
-        $getQuery= "SELECT 1 FROM user WHERE username = :username AND password = :password";
+        $getQuery= "SELECT 1 FROM user WHERE username = BINARY :username AND password = BINARY :password";
         $q = $conn->prepare($getQuery);
         $q->bindParam(":username", $username);
         $q->bindParam(":password", $password);
@@ -25,11 +25,12 @@ class login_Dao
         return reset($q->fetchAll());
     }
 
-    public function createNewAccount($username, $email, $password)
+    public function createNewAccount($displayname, $username, $email, $password)
     {
         $conn = $this->getConnection();
-        $saveQuery= "INSERT INTO user (username, email, password) VALUES (:username, :email, :password)";
+        $saveQuery= "INSERT INTO user (displayname, username, email, password) VALUES (:displayname, :username, :email, :password)";
         $q = $conn->prepare($saveQuery);
+        $q->bindParam(":displayname", $displayname);
         $q->bindParam(":username", $username);
         $q->bindParam(":password", $password);
         $q->bindParam(":email", $email);
@@ -39,7 +40,7 @@ class login_Dao
     public function checkAvailability($username)
     {
         $conn = $this->getConnection();
-        $getQuery= "SELECT * FROM user WHERE username = :username";
+        $getQuery= "SELECT * FROM user WHERE username = BINARY :username";
         $q = $conn->prepare($getQuery);
         $q->bindParam(":username", $username);
         $q->execute();

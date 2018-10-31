@@ -13,4 +13,4 @@ setTimeout(function(){
     $(".message").fadeOut(2000, function(){
         $(this).remove();
     });
-}, 5000);
+}, 7000);

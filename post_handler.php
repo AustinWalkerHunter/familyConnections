@@ -8,7 +8,7 @@ $badForm = false;
 
 if ($_SESSION['guest'] == true) {
     $_SESSION['message']= "This feature is not available for guests. Please
-    sign in to make a post";
+        sign in or register to make a post.";
     $badForm = true;
 }
 

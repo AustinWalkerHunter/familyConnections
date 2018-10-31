@@ -8,30 +8,38 @@ include("includes/a_config.php");?>
 <head>
     <?php include("includes/header.php"); ?>
     <link href="https://fonts.googleapis.com/css?family=Cherry+Swash" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.7">
 </head>
 <body>
     <div id="wrapper">
         <div id="header">
             <h1>Welcome to Family Connections</h1>
         </div>
-        <hr/>
+        <?php if(empty($message)) { ?>
+            <hr/>
+        <?php } ?>
+        <?php if(!empty($message)) { ?>
+            <hr class="hrError"/>
+            <div class="errorMessage"> <?php echo $message; ?> </div>
+        <?php } ?>
         <div class="loginForm">
-            <?php if(!empty($message)) { ?>
-                <div class="errorMessage"> <?php echo $message; ?> </div>
-            <?php } ?>
-
             <div id="openModal" class="modalDialog">
                 <div>
                     <a href="#close" title="Close" class="close">X</a>
                     <h2>Create Account</h2>
                     <hr/>
                     <form method="post" action="signUp_handler.php">
-                        <label for="username">Username</label>
-                        <input type="text" placeholder="Enter Username" id="signUp-username" name="signUp-username" required><br/>
-                        <label for="email">Email Address</label>
-                        <input type="text" placeholder="Enter Email Address" id="signUp-email" name="signUp-email" required><br/>
-                        <label for="password">Password</label>
-                        <input type="password" placeholder="Enter Password" id="signUp-password" name="signUp-password" required>
+                        <label class="modalLabel" for="signUp-displayname">Display Name</label>
+                        <input type="text" placeholder="Display Name" name="signUp-displayname" required>
+                        <label for="signUp-username">Username</label>
+                        <input type="text" placeholder="Username" name="signUp-username" required>
+                        <label for="signUp-email">Email Address</label>
+                        <input type="text" placeholder="Email Address" name="signUp-email" required>
+                        <label for="signUp-password">Password</label>
+                        <input type="password" placeholder="Password" name="signUp-password" required>
+                        <label for="signUp-confirmpassword">Confirm Password</label>
+                        <input type="password" placeholder="Confirm Password" name="signUp-confirmpassword" required>
                         <button type="submit">Sign Up</button>
                     </form>
                 </div>
@@ -40,9 +48,9 @@ include("includes/a_config.php");?>
             <form method="post" action="login_handler.php">
                 <div class="container">
                     <label for="username">Username</label>
-                    <input type="text" placeholder="Enter Username" id="username" name="username"><br/>
+                    <input type="text" placeholder="Enter Username" name="username" value=""><br/>
                     <label for="password">Password</label>
-                    <input type="password" placeholder="Enter Password" id="password" name="password">
+                    <input type="password" placeholder="Enter Password" name="password" value="">
                     <button type="submit">Login</button>
                     <label class="checkbox">
                         <input type="checkbox" checked="checked" id="remember" name="remember"> Remember me
