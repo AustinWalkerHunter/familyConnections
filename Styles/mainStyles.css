@@ -16,7 +16,6 @@ body {
     margin-right: auto;
     margin-left: auto;
     min-height:100%;
-    /*overflow: hidden;*/
     display: block;
     position: relative;
     padding-bottom: 50px;
@@ -109,5 +108,4 @@ li {
     left: 0;
     right: 0;
     z-index: 2;
-
 }

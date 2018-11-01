@@ -1,27 +1,30 @@
 <?php session_start();
-$message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
-unset($_SESSION['message']);
+    $message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
+    unset($_SESSION['message']);
 
 if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
     header('Location: login.php');
     exit;
 }
+
 require_once 'post_Dao.php';
 $dao = new post_Dao();
 $posts = $dao->getPosts();
 
-//echo "<pre>" . print_r($_SESSION,1) . "</pre>";
+echo "<pre>" . print_r($_SESSION,1) . "</pre>";
 
 include_once("includes/a_config.php");?>
 <!DOCTYPE html>
 <head>
     <?php include_once("includes/header.php"); ?>
-    <!--messages-->
+    <!--Error messages.-->
     <?php if(!empty($message)) { ?>
         <div class="message <?php echo isset($_SESSION['validated']) ? $_SESSION['validated'] : '';?>"><?php
-            echo $message; ?></div>
-    <?php  }
-    unset($_SESSION['messages']);
+            echo $message;
+            unset($_SESSION['validated']);
+            ?></div>
+    <?php
+    }
     ?>
 </head>
 <body>
@@ -49,7 +52,7 @@ include_once("includes/a_config.php");?>
                 </ul>
                 <hr/>
                 <form method="post" action="post_handler.php">
-                    <textarea  placeholder="Join the conversation!" name="content"></textarea>
+                    <textarea  placeholder="Join the conversation!" name="content" ></textarea>
                     <button class="postButton" type="submit">Post!</button>
                 </form>
             </div>

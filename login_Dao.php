@@ -24,6 +24,15 @@ class login_Dao
         $q->execute();
         return reset($q->fetchAll());
     }
+    public function getDisplayname($username)
+    {
+        $conn = $this->getConnection();
+        $getQuery = "SELECT displayname FROM user WHERE username = BINARY :username";
+        $q = $conn->prepare($getQuery);
+        $q->bindParam(":username", $username);
+        $q->execute();
+        return reset($q->fetchObject());
+    }
 
     public function createNewAccount($displayname, $username, $email, $password)
     {
