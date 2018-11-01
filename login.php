@@ -2,7 +2,7 @@
     $message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
     unset($_SESSION['message']);
 
-echo "<pre>" . print_r($_SESSION,1) . "</pre>";
+//echo "<pre>" . print_r($_SESSION,1) . "</pre>";
 
 include("includes/a_config.php");?>
 

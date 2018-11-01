@@ -11,7 +11,7 @@ require_once 'post_Dao.php';
 $dao = new post_Dao();
 $posts = $dao->getPosts();
 
-echo "<pre>" . print_r($_SESSION,1) . "</pre>";
+//echo "<pre>" . print_r($_SESSION,1) . "</pre>";
 
 include_once("includes/a_config.php");?>
 <!DOCTYPE html>
