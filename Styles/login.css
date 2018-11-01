@@ -1,7 +1,12 @@
 html,body {
     height: 95%;
     position: relative;
-    background-color: #e6e6e6;
+    background-color: wheat;
+}
+.homeIcon {
+    width: 100px; height: 100px;
+    margin: 0;
+    display: inline;
 }
 #wrapper{
     width: 80%;

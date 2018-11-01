@@ -49,7 +49,7 @@ include_once("includes/a_config.php");?>
                 </ul>
                 <hr/>
                 <form method="post" action="post_handler.php">
-                    <textarea  placeholder="What's on your mind?" name="content"></textarea>
+                    <textarea  placeholder="Join the conversation!" name="content"></textarea>
                     <button class="postButton" type="submit">Post!</button>
                 </form>
             </div>

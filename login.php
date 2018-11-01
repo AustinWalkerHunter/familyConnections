@@ -14,6 +14,8 @@ include("includes/a_config.php");?>
 <body>
     <div id="wrapper">
         <div id="header">
+            <img class="homeIcon" src="../Resources/Images/famIcon.png"/>
+
             <h1>Welcome to Family Connections</h1>
         </div>
         <?php if(empty($message)) { ?>
