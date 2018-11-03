@@ -3,6 +3,8 @@ require_once 'post_Dao.php';
 $dao = new post_Dao();
 
 $content = $_POST['content'];
+$user_id = $_SESSION['userData']['id'];
+$displayname = $_SESSION['userData']['displayname'];
 
 $badForm = false;
 
@@ -29,7 +31,7 @@ if($badForm){
     exit;
 }
 
-$dao->savePost($content);
+$dao->savePost($user_id, $content);
 $_SESSION['message'] = "Successfully posted!";
 $_SESSION['validated'] = 'good';
 

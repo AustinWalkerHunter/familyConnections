@@ -4,7 +4,7 @@ require_once 'login_Dao.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 $guest = $_POST['guest'];
-$_SESSION['username'] = $username;
+$_SESSION['loginusername'] = $username;
 $_SESSION['loginpassword'] = $password;
 
 
@@ -15,15 +15,16 @@ if ($loginCheck || $guest) {
     $_SESSION['logged_in'] = 1;
     unset($_SESSION['message']);
     if($loginCheck){
-        $displayname = $dao->getDisplayname($username);
-        $_SESSION['displayname'] = $displayname;
+        $userData = $dao->getUserData($username);
+        $_SESSION['userData'] = $userData;
+        unset($_SESSION["loginusername"]);
         unset($_SESSION["loginpassword"]);
     }
     else{
         //If a user attempts to login then clicks guest all data is cleared
         $_SESSION['guest'] = 1;
         $_SESSION["displayname"] = "Guest";
-        unset($_SESSION["username"]);
+        unset($_SESSION["loginusername"]);
         unset($_SESSION["email"]);
         unset($_SESSION["loginpassword"]);
     }

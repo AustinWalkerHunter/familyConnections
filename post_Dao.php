@@ -14,9 +14,14 @@ class post_Dao
         return $conn;
     }
 
-    public function savePost($content){
+    public function getUsers(){
         $conn = $this->getConnection();
-        $saveQuery= "INSERT INTO posts (content, date_entered) VALUE (:content, CURRENT_TIMESTAMP)";
+        return $conn->query("select * from user order by displayname", PDO::FETCH_ASSOC);
+    }
+
+        public function savePost($user_id, $content){
+        $conn = $this->getConnection();
+        $saveQuery= "INSERT INTO posts (user_id, content, date_entered) VALUE ($user_id, :content, CURRENT_TIMESTAMP)";
         $q = $conn->prepare($saveQuery);
         $q->bindParam(":content", $content);
         $q->execute();
@@ -24,6 +29,6 @@ class post_Dao
 
     public function getPosts(){
         $conn = $this->getConnection();
-        return $conn->query("select user_id, content, date_entered from posts order by date_entered desc", PDO::FETCH_ASSOC);
+        return $conn->query("select displayname, content, date_entered from posts JOIN USER ON posts.user_id = user.id order by date_entered desc", PDO::FETCH_ASSOC);
     }
 }
