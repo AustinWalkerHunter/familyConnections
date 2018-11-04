@@ -76,7 +76,7 @@ hr{
     margin-right: auto;
     left: 0;
     right: 0;
-    margin-top: 0;
+    margin-top: -4%;
     display: inline-block;
     position: absolute;
 }
@@ -170,7 +170,7 @@ span.pass {
 .modalDialog > div {
     width: 40%;
     position: relative;
-    margin: 1.5% auto;
+    margin: 5% auto;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
     background: wheat;
