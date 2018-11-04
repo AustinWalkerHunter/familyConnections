@@ -39,18 +39,21 @@ if (!$usernameCheck) {
         }
         else{
             $_SESSION['logged_in'] = 0;
+            $_SESSION['errorNumber'] = 2;
             $_SESSION['signupMessage'] = "Uh oh! The passwords you entered do not match. Please try again.";
-            header('Location: login.php#openModal');
+            header('Location: login.php#openSignUpModal');
             exit;
         }
     } else {
         $_SESSION['logged_in'] = 0;
+        $_SESSION['errorNumber'] = 1;
         $_SESSION['signupMessage'] = "Uh oh! The email you entered is invalid. Please try again.";
-        header('Location: login.php#openModal');
+        header('Location: login.php#openSignUpModal');
         exit;
     }
 }
 $_SESSION['logged_in'] = 0;
+$_SESSION['errorNumber'] = 3;
 $_SESSION['signupMessage'] = "Uh oh! The username you have chosen is already in use.";
-header('Location: login.php#openModal');
+header('Location: login.php#openSignUpModal');
 exit;

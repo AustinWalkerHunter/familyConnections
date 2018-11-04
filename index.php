@@ -62,7 +62,9 @@ include_once("includes/a_config.php");?>
             <?php
             foreach ($posts as $post) {
                 echo "<div class='userPosts'>
-                    <p>{$post['displayname']}</p>
+                    <p class='username'><a href=''>{$post['displayname']}</a></p>
+                    " . ((($post['user_id'] === $_SESSION['userData']['id']) || ($_SESSION['userData']['username'] === "ADMIN"))  ? "<p class='editPost'><a href='/delete_post.php?content_id={$post['content_id']}'/>X</a></p>" : '') ."
+                    <hr class='hrPost'/>
                     <textarea readonly>{$post['content']}</textarea>
                         <span>{$post['date_entered']}</span>
                   </div>";

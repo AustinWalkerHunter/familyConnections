@@ -9,7 +9,11 @@ html,
 body {
     height: 100%;
     position: relative;
-    background-color: #f7e0aa;
+    background-color: wheat;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 
 #wrapper {
@@ -53,6 +57,18 @@ body {
 a:hover {
     opacity: 0.7;
 }
+.currentUser{
+    position: relative;
+    display: inline;
+    float: right;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+    color: black;
+    text-decoration: underline;
+
+}
+
 .logOut {
     position: relative;
     display: inline;
@@ -65,6 +81,7 @@ a:hover {
     bottom: 0;
     width: 100%;
 }
+
 .mainTitle {
     display: inline;
     padding-left: 10px;

@@ -1,6 +1,10 @@
+<?php
+session_start();
+?>
 <div id="navigation">
     <a href="/index.php"><img class="homeIcon" src="../Resources/Images/famIcon.png"></a>
     <h1 class="mainTitle">Family Connections</h1>
+    <p class="currentUser">Logged in: <?php print($_SESSION['userData']['displayname'])?></p>
     <ul>
         <li<?php if ($CURRENT_PAGE=="Home")
             echo " id=\"currentpage\""; ?>><a href="/index.php">Home</a></li>

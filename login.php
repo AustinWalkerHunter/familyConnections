@@ -10,18 +10,21 @@
     $confirmpassword = isset($_SESSION['signUp-confirmpassword']) ? $_SESSION['signUp-confirmpassword'] : '';
     $permissionAttempt = isset($_SESSION['permissionAttempt']) ? $_SESSION['permissionAttempt'] : '';
     $permission = isset($_SESSION['permission']) ? $_SESSION['permission'] : 0;
+    $errorNumber = isset($_SESSION['errorNumber']) ? $_SESSION['errorNumber'] : '';
 
      unset($_SESSION["loginusername"]);
      unset($_SESSION["loginpassword"]);
      unset($_SESSION['message']);
      unset($_SESSION['signupMessage']);
-     unset($_SESSION['permission']);
      unset($_SESSION["signUp-username"]);
      unset($_SESSION["signUp-displayname"]);
      unset($_SESSION["signUp-email"]);
      unset($_SESSION["signUp-password"]);
      unset($_SESSION["signUp-confirmpassword"]);
      unset($_SESSION["permissionAttempt"]);
+     unset($_SESSION["errorNumber"]);
+
+//     unset($_SESSION['permission']);
 
 
 //echo "<pre>" . print_r($_SESSION,1) . "</pre>";
@@ -57,7 +60,7 @@ include("includes/a_config.php");?>
             <form method="post" action="login_handler.php">
                 <div class="container">
                     <label for="username">Username</label>
-                    <input type="text" placeholder="Enter Username" name="username" value="<?php echo isset($loginusername) ? $loginusername : ''; ?>"><br/>
+                    <input type="text" placeholder="Enter Username" name="username" autofocus value="<?php echo isset($loginusername) ? $loginusername : ''; ?>"><br/>
                     <label for="password">Password</label>
                     <input type="password" placeholder="Enter Password" name="password" value="<?php echo isset($loginpassword) ? $loginpassword : ''; ?>">
                     <button type="submit">Login</button>
@@ -66,32 +69,22 @@ include("includes/a_config.php");?>
                     </label>
                     <span class="pass">Forgot <a href="#">password?</a></span>
                     <div class="createAccount">
-                        <span>Not a member? <a href="#openModal">Sign up</a></span>
+                        <span>Not a member? <a href="#openPermissionModal">Sign up</a></span>
                     </div>
                     <button class="guest" name="guest" value="guest">Guest</button>
                 </div>
             </form>
 
-            <div id="openModal" class="modalDialog">
+            <!--Permission Modal-->
+            <div id="openPermissionModal" class="modalDialog">
                 <div>
-                    <a href="#close" title="Close" class="close" onclick="resetSessionData()">X</a>
+                    <a href="/login.php" title="Close" class="close">X</a>
                     <div id="permissionOnly">
-                        <h2>Create Account</h2>
+                        <h2>Permission Code</h2>
                         <hr/>
-                        <form method="post" action="signUp_handler.php">
-                            <label class="modalLabel" for="signUp-displayname">Display Name</label>
-                            <input type="text" placeholder="Display Name" name="signUp-displayname" value="<?php echo isset($displayname) ? $displayname : ''; ?>" required>
-                            <label for="signUp-username">Username</label>
-                            <input type="text" placeholder="Username" name="signUp-username" value="<?php echo isset($signupUsername) ? $signupUsername : ''; ?>" required>
-                            <label for="signUp-email">Email Address</label>
-                            <input type="text" placeholder="Email Address" name="signUp-email" value="<?php echo isset($email) ? $email : ''; ?>" required>
-                            <label for="signUp-password">Password</label>
-                            <input type="password" placeholder="Password" name="signUp-password" value="<?php echo isset($signupPassword) ? $signupPassword : ''; ?>" required>
-                            <label for="signUp-confirmpassword">Confirm Password</label>
-                            <input type="password" placeholder="Confirm Password" name="signUp-confirmpassword" value="<?php echo isset($confirmpassword) ? $confirmpassword : ''; ?>" required>
-<!--                            <label class="modalLabel" for="permissionAttempt">*Permission Code*</label>-->
-<!--                            <input type="text" placeholder="Enter Code" name="permissionAttempt" value="--><?php //echo isset($permissionAttempt) ? $permissionAttempt : ''; ?><!--" autocomplete="off" required>-->
-                            <button type="submit">Sign Up</button>
+                        <form method="post" action="permission_handler.php">
+                            <input class="<?php echo ($errorNumber === 1) ? "invalidInput" : ''; ?>" type="text" placeholder="Enter Code" name="permissionAttempt"  value="<?php echo isset($permissionAttempt) ? $permissionAttempt : ''; ?>" autocomplete="off" required>
+                            <button type="submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -99,6 +92,35 @@ include("includes/a_config.php");?>
                     <div id="signupError"> <?php echo $signupMessage; ?> </div>
                 <?php } ?>
             </div>
+
+            <!-- Sign-up Modal-->
+            <?php if($permission) { ?>
+                <div id="openSignUpModal" class="modalDialog">
+                    <div>
+                        <a href="/login.php" title="Close" class="close">X</a>
+                        <div id="permissionOnly">
+                            <h2>Create Account</h2>
+                            <hr/>
+                            <form method="post" action="signUp_handler.php">
+                                <label class="modalLabel" for="signUp-displayname">Display Name</label>
+                                <input type="text" placeholder="Display Name" name="signUp-displayname" autofocus value="<?php echo isset($displayname) ? $displayname : ''; ?>" required>
+                                <label for="signUp-username">Username</label>
+                                <input class="<?php echo ($errorNumber === 3) ? "invalidInput" : ''; ?>" type="text" placeholder="Username" name="signUp-username" value="<?php echo isset($signupUsername) ? $signupUsername : ''; ?>" required>
+                                <label for="signUp-email">Email Address</label>
+                                <input class="<?php echo ($errorNumber === 1) ? "invalidInput" : ''; ?>" type="text" placeholder="Email Address" name="signUp-email" value="<?php echo isset($email) ? $email : ''; ?>" required>
+                                <label for="signUp-password">Password</label>
+                                <input class="<?php echo ($errorNumber === 2) ? "invalidInput" : ''; ?>" type="password" placeholder="Password" name="signUp-password" value="<?php echo isset($signupPassword) ? $signupPassword : ''; ?>" required>
+                                <label for="signUp-confirmpassword">Confirm Password</label>
+                                <input class="<?php echo ($errorNumber === 2) ? "invalidInput" : ''; ?>" type="password" placeholder="Confirm Password" name="signUp-confirmpassword" value="<?php echo (($errorNumber === 2) ? '' : isset($confirmpassword) ? $confirmpassword : ''); ?>" required>
+                                <button type="submit">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                    <?php if(!empty($signupMessage)) { ?>
+                        <div id="signupError"> <?php echo $signupMessage; ?> </div>
+                    <?php } ?>
+                </div>
+            <?php } ?>
             <?php include("includes/footer.php"); ?>
         </div>
     </div>

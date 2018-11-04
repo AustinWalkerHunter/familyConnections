@@ -8,12 +8,12 @@ $_SESSION['permissionAttempt'] = $permissionCode;
 
 if($permissionCode === $code){
     $_SESSION['permission'] = 1;
-    ?><script>showSignUp()</script><?php
-    header('Location: login.php');
+    header('Location: login.php#openSignUpModal');
     exit;
 }
 else {
+    $_SESSION['errorNumber'] = 1;
     $_SESSION['signupMessage'] = "Incorrect permission code. Please try again.";
-    header('Location: login.php');
+    header('Location: login.php#openPermissionModal');
     exit;
 }

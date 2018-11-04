@@ -29,6 +29,14 @@ class post_Dao
 
     public function getPosts(){
         $conn = $this->getConnection();
-        return $conn->query("select displayname, content, date_entered from posts JOIN USER ON posts.user_id = user.id order by date_entered desc", PDO::FETCH_ASSOC);
+        return $conn->query("select displayname, content, date_entered, content_id, user_id from posts JOIN USER ON posts.user_id = user.id order by date_entered desc", PDO::FETCH_ASSOC);
+    }
+
+    public function deletePost($id){
+        $conn = $this->getConnection();
+        $saveQuery = "DELETE FROM posts WHERE content_id = :content_id";
+        $q = $conn->prepare($saveQuery);
+        $q->bindParam(":content_id", $id);
+        $q->execute();
     }
 }
