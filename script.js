@@ -6,28 +6,39 @@ $(function(){
         this.style.height = (this.scrollHeight) + 'px';
     });
 
+    $('#toggle > button').click(function() {
+        var ix = $(this).index();
 
+        $('#makePostContainer').toggle( ix === 0 );
+        $('#makeMeetupContainer').toggle( ix === 1 );
+    });
 
 });
 
-function makeMeetUp(){
-    document.getElementById("postContainer").style.backgroundColor = "rgba(255, 162, 162, 0.73)";
-}
 function makePost(){
     document.getElementById("postContainer").style.backgroundColor = "rgb(222, 240, 255)";
+    document.getElementById("postBtn").style.backgroundColor = "#4267b2";
+    document.getElementById("meetupBtn").style.backgroundColor = "transparent";
+    document.getElementById("postBtn").style.color = "white";
+    document.getElementById("meetupBtn").style.color = "black";
+
+
+
+
 }
 
-// function hideSignUp() {
-//     document.getElementById("permissionOnly").style.display = "none";
-// }
-//
-// function showSignUp() {
-//    // document.getElementById("permissionCode").style.display = "none";
-//     document.getElementById("permissionOnly").style.display = "show";
-// }
+function makeMeetUp(){
+    document.getElementById("postContainer").style.backgroundColor = "rgba(255, 4, 0, 0.15)";
+    document.getElementById("postBtn").style.backgroundColor = "transparent";
+    document.getElementById("meetupBtn").style.backgroundColor = "indianred";
+    document.getElementById("postBtn").style.color = "black";
+    document.getElementById("meetupBtn").style.color = "white";
+}
+
 
 setTimeout(function(){
     $(".message").fadeOut(2000, function(){
         $(this).remove();
     });
 }, 7000);
+

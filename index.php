@@ -46,27 +46,41 @@ include_once("includes/a_config.php");?>
         <!-- the content -->
         <div id="content">
             <div class="postContainer" id="postContainer">
-                <ul class="postType">
-                    <li><button class="postBtn" onclick="makePost()">Post</button></li>
-                    <li> | </li>
-                    <li><button class="postBtn" onclick="makeMeetUp()">Meet-Up</button></li>
-                </ul>
+                <p id="toggle">
+                    <button class="btn postBtn" id="postBtn" onclick="makePost()">Post</button>
+                    <button class="btn meetupBtn" id="meetupBtn" onclick="makeMeetUp()">Meet-Up</button>
+                </p>
                 <hr/>
                 <form method="post" action="post_handler.php">
-                    <textarea  placeholder="Join the conversation!" name="content" id="postContent"></textarea>
-                    <button class="postButton" type="submit">Post!</button>
+                        <div id="makePostContainer">
+                            <input class="postTitle" type="text" placeholder="Subject" name="subject" onkeypress="return event.keyCode != 13;" required>
+                            <textarea  placeholder="Join the conversation!" name="content" id="postContent" required></textarea>
+                            <button class="postButton" type="submit">Post!</button>
+                        </div>
+                </form>
+                <form method="post" action="post_handler.php">
+                        <div id="makeMeetupContainer">
+                            <input class="postTitle" type="text" placeholder="Subject" name="subject" onkeypress="return event.keyCode != 13;" required>
+                            <input id="datePicker" class="meetupDate" type="date" name="date" data-date="" data-date-format="DD MMMM YYYY" required> <label class="dateLabel">Start day:</label>
+                            <textarea  placeholder="Plan a meet-up!" name="content" id="meetupContent" required></textarea>
+                            <button class="postButton" type="submit">Post meet-up!</button>
+                        </div>
                 </form>
             </div>
 
             <!--   User Posts     -->
             <?php
             foreach ($posts as $post) {
-                echo "<div class='userPosts'>
+                echo "<div class='userPosts " . (($post['date'] != NULL) ? "meetup" : '') . "'>
                     <p class='username'><a href=''>{$post['displayname']}</a></p>
-                    " . ((($post['user_id'] === $_SESSION['userData']['id']) || ($_SESSION['userData']['username'] === "ADMIN"))  ? "<p class='editPost'><a href='/delete_post.php?content_id={$post['content_id']}'/>X</a></p>" : '') ."
+                    " . ((($post['user_id'] === $_SESSION['userData']['id']) || ($_SESSION['userData']['username'] === "ADMIN"))
+                        ? "<p class='editPost'><a href='/delete_post.php?content_id={$post['content_id']}'/>X</a></p>" : '')
+                    . (($post['date'] != NULL) ? "<span class='meetupLabel'>Meet-Up</span>" : "<span class='meetupLabel postLabel'>Post</span>") . (($post['date'] != NULL) ? "<p class='meetupDate'>{$post['date']}</p><span class='startDate'>Meet-up date:  </span>" : null) . "
+                        
                     <hr class='hrPost'/>
+                    <p class=\"postTitle\">{$post['subject']}</p>
                     <textarea readonly>{$post['content']}</textarea>
-                        <span>{$post['date_entered']}</span>
+                        <span class='datePosted'>{$post['date_entered']}</span>
                   </div>";
             }
             ?>

@@ -60,7 +60,7 @@ include("includes/a_config.php");?>
             <form method="post" action="login_handler.php">
                 <div class="container">
                     <label for="username">Username</label>
-                    <input type="text" placeholder="Enter Username" name="username" autofocus value="<?php echo isset($loginusername) ? $loginusername : ''; ?>"><br/>
+                    <input type="text" placeholder="Enter Username" name="username" value="<?php echo isset($loginusername) ? $loginusername : ''; ?>"><br/>
                     <label for="password">Password</label>
                     <input type="password" placeholder="Enter Password" name="password" value="<?php echo isset($loginpassword) ? $loginpassword : ''; ?>">
                     <button type="submit">Login</button>
@@ -103,7 +103,7 @@ include("includes/a_config.php");?>
                             <hr/>
                             <form method="post" action="signUp_handler.php">
                                 <label class="modalLabel" for="signUp-displayname">Display Name</label>
-                                <input type="text" placeholder="Display Name" name="signUp-displayname" autofocus value="<?php echo isset($displayname) ? $displayname : ''; ?>" required>
+                                <input type="text" placeholder="Display Name" name="signUp-displayname" value="<?php echo isset($displayname) ? $displayname : ''; ?>" required>
                                 <label for="signUp-username">Username</label>
                                 <input class="<?php echo ($errorNumber === 3) ? "invalidInput" : ''; ?>" type="text" placeholder="Username" name="signUp-username" value="<?php echo isset($signupUsername) ? $signupUsername : ''; ?>" required>
                                 <label for="signUp-email">Email Address</label>

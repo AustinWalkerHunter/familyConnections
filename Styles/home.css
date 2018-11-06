@@ -48,6 +48,13 @@
     background-color: rgb(222, 240, 255);
     margin-bottom: 3%;
 }
+#toggle{
+    /*text-align: center;*/
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
 .userPosts{
     border: 2px solid gray;
     border-radius: 5px;
@@ -63,6 +70,9 @@
 }
 .hrPost{
     margin-top: 0;
+}
+.meetup{
+    background-color: rgba(255, 4, 0, 0.15);
 }
 .editPost{
     float: right;
@@ -85,29 +95,108 @@
 .username{
     display: inline-block;
     margin: 1% 1%;
-    font-weight: bold;
 }
-button.postBtn{
+button.btn{
     background-color:transparent;
     font-size: 20px;
     color: black;
     display: inline;
-    border: none;
     cursor: pointer;
-    width: 20%;
+    width: auto;
+    border-color: black;
+    border-radius: 5px;
+    border-style: solid;
 }
-textarea{
+button.btn:hover{
+    opacity: 0.7;
+}
+button.postBtn{
+    margin-left: 20%;
+    background-color: #4267b2;
+    color: white;
+    outline: none;
+}
+button.meetupBtn{
+    float: right;
+    margin-right: 20%;
+    background-color: transparent;
+    outline: none;
+}
+
+textarea, input{
     background-color:transparent;
     color: black;
     width: 95%;
     display: block;
     border: none;
     margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
     box-sizing: border-box;
     outline: none;
     font-size: 20px;
     resize: none;
+    height: auto;
+}
+.postTitle{
+    font-weight: bold;
+    display: inline-block;
+    width: fit-content;
+    margin: 0;
+    text-decoration: underline;
+    float: left;
+    margin-bottom: 5px;
+}
+.meetupDate{
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.datePosted{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.startDate{
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-right: 5px;
+    text-decoration: underline;
+}
+#makeMeetupContainer {
+    display:none;
+}
+#meetupContent{
+    height: auto !important;
+}
+.dateLabel{
+    float:right;
+    padding-top: 2px;
+    text-decoration: underline;
+}
+.meetupLabel{
+    font-size: 15px;
+    background-color: #cd5c5c;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    cursor: auto;
+    width: fit-content;
+    border-radius: 12px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.postLabel{
+    background-color: rgb(222, 240, 255) !important;
+    color: #2f2f2f;
 }
 button.postButton{
     font-size: 15px;
