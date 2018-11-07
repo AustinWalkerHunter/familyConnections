@@ -72,7 +72,7 @@
     margin-top: 0;
 }
 .meetup{
-    background-color: rgba(255, 4, 0, 0.15);
+    //background-color: rgba(255, 4, 0, 0.15);
 }
 .editPost{
     float: right;
@@ -143,15 +143,22 @@ textarea, input{
     display: inline-block;
     width: fit-content;
     margin: 0;
+    margin-left: 3px;
     text-decoration: underline;
     float: left;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder  {
+    text-decoration: underline;
+    color: black !important;
 }
 .meetupDate{
+    font-size: small;
     display: inline-block;
     float: right;
-    margin-top: 5px;
     margin-bottom: 0;
+    margin-top: 7px;
+    width: auto;
 }
 .datePosted{
     margin-bottom: 0;
@@ -171,6 +178,11 @@ textarea, input{
 #meetupContent{
     height: auto !important;
 }
+.textareaContent{
+    background-color: rgba(215, 215, 216, 0.33);
+    border-radius: 12px;
+    padding: 7px;
+}
 .dateLabel{
     float:right;
     padding-top: 2px;
@@ -181,10 +193,8 @@ textarea, input{
     background-color: #cd5c5c;
     color: white;
     padding: 5px 5px;
-    border: none;
     cursor: auto;
     width: fit-content;
-    border-radius: 12px;
     display: inline-block;
     font-weight: bold;
     margin-bottom: 5px;
@@ -193,6 +203,27 @@ textarea, input{
     margin-right: auto;
     left: 0;
     right: 0;
+    border-radius: 12px;
+    border-color: black;
+    border-width: 1.4px;
+    border-style: solid;
+}
+.memberNames{
+    font-size: 15px;
+    background-color: rgba(247, 247, 247, 0.85);
+    color: #2f2f2f;
+    padding: 1px;
+    cursor: auto;
+    width: auto;
+    font-weight: bold;
+    margin-bottom: 5%;
+    position: relative;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 12px;
+    border-color: black;
+    border-width: 1.4px;
+    border-style: solid;
 }
 .postLabel{
     background-color: rgb(222, 240, 255) !important;
@@ -218,3 +249,7 @@ form{
     margin-bottom: 0;
 }
 
+a{
+    cursor: pointer;
+
+}

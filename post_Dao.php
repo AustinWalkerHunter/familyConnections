@@ -21,7 +21,7 @@ class post_Dao
 
         public function savePost($user_id, $content, $subject, $date){
         $conn = $this->getConnection();
-        $saveQuery= "INSERT INTO posts (user_id, content, subject, date, date_entered) VALUE ($user_id, :content, :subject, :date, CURRENT_TIMESTAMP)";
+        $saveQuery= "INSERT INTO posts (user_id, content, subject, date) VALUE ($user_id, :content, :subject, :date)";
         $q = $conn->prepare($saveQuery);
         $q->bindParam(":content", $content);
         $q->bindParam(":subject", $subject);

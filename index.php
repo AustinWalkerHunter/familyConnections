@@ -79,8 +79,8 @@ include_once("includes/a_config.php");?>
                         
                     <hr class='hrPost'/>
                     <p class=\"postTitle\">{$post['subject']}</p>
-                    <textarea readonly>{$post['content']}</textarea>
-                        <span class='datePosted'>{$post['date_entered']}</span>
+                    <div class='textareaContent'><textarea readonly>{$post['content']}</textarea></div>
+                    <span class='datePosted'>{$post['date_entered']}</span>
                   </div>";
             }
             ?>

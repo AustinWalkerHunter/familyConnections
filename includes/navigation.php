@@ -13,7 +13,8 @@ session_start();
         <li<?php if ($CURRENT_PAGE=="Meet-ups")
             echo " id=\"currentpage\""; ?>><a href="/meetups.php">Meet-Ups</a></li>
         <li<?php if ($CURRENT_PAGE=="Photos")
-            echo " id=\"currentpage\""; ?>><a href="/photos.php">Photos</a></li>
+            echo " id=\"currentpage\""; ?>>
+<!--            <a href="/photos.php">Photos</a></li>-->
         <li class="logOut"><a href="/logout.php">Logout</a></li>
     </ul>
     <hr/>

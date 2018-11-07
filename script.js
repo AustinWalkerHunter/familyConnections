@@ -28,7 +28,7 @@ function makePost(){
 }
 
 function makeMeetUp(){
-    document.getElementById("postContainer").style.backgroundColor = "rgba(255, 4, 0, 0.15)";
+    document.getElementById("postContainer").style.backgroundColor = "rgba(222, 4, 1, 0.31)";
     document.getElementById("postBtn").style.backgroundColor = "transparent";
     document.getElementById("meetupBtn").style.backgroundColor = "indianred";
     document.getElementById("postBtn").style.color = "black";
