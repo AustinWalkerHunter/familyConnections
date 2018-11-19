@@ -121,8 +121,8 @@ include("includes/a_config.php");?>
                     <?php } ?>
                 </div>
             <?php } ?>
-            <?php include("includes/footer.php"); ?>
         </div>
+        <?php include("includes/footer.php"); ?>
     </div>
 </body>
 

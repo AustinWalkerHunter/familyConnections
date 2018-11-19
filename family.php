@@ -1,4 +1,11 @@
-<?php include("includes/a_config.php");?>
+<?php session_start();
+
+if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+    header('Location: login.php');
+    exit;
+}
+
+include("includes/a_config.php");?>
 <!DOCTYPE html>
 <head>
     <?php include("includes/header.php");
@@ -22,9 +29,9 @@
         <?php
         foreach ($users as $user) {
             echo "<div>
-                <h4>{$user['displayname']}</h4>
-                <h5>Username: {$user['username']}</h5>
-                <h5>Email: {$user['email']}</h5>
+                <h4>" . htmlentities($user['displayname']) . "</h4>
+                <h5>Username: " . htmlentities($user['username']) . "</h5>
+                <h5>Email: " . htmlentities($user['email']) . "</h5>
                 <hr>
             </div>";
         }

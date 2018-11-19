@@ -18,8 +18,8 @@ class post_Dao
         $conn = $this->getConnection();
         return $conn->query("select * from user order by displayname", PDO::FETCH_ASSOC);
     }
-
-        public function savePost($user_id, $content, $subject, $date){
+    
+    public function savePost($user_id, $content, $subject, $date){
         $conn = $this->getConnection();
         $saveQuery= "INSERT INTO posts (user_id, content, subject, date) VALUE ($user_id, :content, :subject, :date)";
         $q = $conn->prepare($saveQuery);

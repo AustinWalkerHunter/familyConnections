@@ -5,8 +5,10 @@ $dao = new login_Dao();
 $displayname = $_POST['signUp-displayname'];
 $username = $_POST['signUp-username'];
 $email = $_POST['signUp-email'];
-$password = $_POST['signUp-password'];
-$confirmpassword = $_POST['signUp-confirmpassword'];
+
+$salt = "fKd93Vmz!k*dAv5029Vkf9$3Aa";
+$password =  $_POST['signUp-password'];
+$confirmpassword =  $_POST['signUp-confirmpassword'];
 
 
 $_SESSION['signUp-displayname'] = $displayname;
@@ -22,6 +24,7 @@ if (!$usernameCheck) {
     if (preg_match($emailRegex, $email)) {
         // Indeed, the expression matches
         if($password === $confirmpassword) {
+            $password =  hash("sha256", $_POST['signUp-password'] . $salt);
             $dao->createNewAccount($displayname, $username, $email, $password);
             $userData = $dao->getUserData($username);
             $_SESSION['userData'] = $userData;

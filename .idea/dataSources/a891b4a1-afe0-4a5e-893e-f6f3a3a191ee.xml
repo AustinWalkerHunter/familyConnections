@@ -853,8 +853,9 @@
     </column>
     <column id="211" parent="202" name="date_entered">
       <Position>3</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="212" parent="202" name="user_id">
@@ -901,7 +902,7 @@
     </column>
     <column id="219" parent="203" name="password">
       <Position>4</Position>
-      <DataType>varchar(64)|0s</DataType>
+      <DataType>varchar(1024)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

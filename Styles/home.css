@@ -149,7 +149,6 @@ textarea, input{
     margin-bottom: 10px;
 }
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder  {
-    text-decoration: underline;
     color: black !important;
 }
 .meetupDate{

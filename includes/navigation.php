@@ -1,10 +1,9 @@
-<?php
-session_start();
+<?php session_start();
 ?>
 <div id="navigation">
     <a href="/index.php"><img class="homeIcon" src="../Resources/Images/famIcon.png"></a>
     <h1 class="mainTitle">Family Connections</h1>
-    <p class="currentUser">Logged in: <?php ($_SESSION['guest']) ? print($_SESSION['displayname']) : print($_SESSION['userData']['displayname'])?></p>
+    <p class="currentUser">Logged in: <?php ($_SESSION['guest']) ? print(htmlentities($_SESSION['displayname'])) : print(htmlentities($_SESSION['userData']['displayname']))?></p>
     <ul>
         <li<?php if ($CURRENT_PAGE=="Home")
             echo " id=\"currentpage\""; ?>><a href="/index.php">Home</a></li>
