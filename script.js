@@ -15,6 +15,8 @@ $(function(){
 
 });
 
+
+
 function makePost(){
     document.getElementById("postContainer").style.backgroundColor = "rgb(222, 240, 255)";
     document.getElementById("postBtn").style.backgroundColor = "#4267b2";

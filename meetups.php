@@ -6,6 +6,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 }
 
 include("includes/a_config.php");
+//echo "<pre>" . print_r($_SESSION,1) . "</pre>";
 
 require_once 'post_Dao.php';
 $dao = new post_Dao();
@@ -29,10 +30,10 @@ $users = $dao->getUsers();
             <?php
             foreach ($posts as $post) {
                 if(($post['date'] != NULL)) {
-                    echo "<div class='userPosts " . (($post['date'] != NULL) ? "meetup" : '') . "'>
-                    <p class='username'><a href=''>{$post['displayname']}</a></p>
+                    echo "<div id='postBlock" . $post['content_id'] . "' class='userPosts " . (($post['date'] != NULL) ? "meetup" : '') . "'>
+                    <p class='username'><a href=''>" . htmlentities($post['displayname']) . "</a></p>
                     " . ((($post['user_id'] === $_SESSION['userData']['id']) || ($_SESSION['userData']['username'] === "ADMIN"))
-                            ? "<p class='editPost'><a href='/delete_post.php?content_id={$post['content_id']}'/>X</a></p>" : '')
+                            ? "<p class='editPost'><a onclick='removeNewPost({$post['content_id']})'>X</a></p>" : '')
                         . (($post['date'] != NULL) ? "<span class='meetupLabel'>Meet-Up</span>" : null) . "
                         
                     <hr class='hrPost'/>

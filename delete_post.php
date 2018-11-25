@@ -15,5 +15,10 @@ $id = $_GET['content_id'];
 require_once 'post_Dao.php';
 $dao = new post_Dao();
 $dao->deletePost($id);
-header('Location: index.php');
+//if($_SESSION['page'] == "Meet-ups"){
+//    header('Location: /meetups.php');
+//}
+//else {
+//    header('Location: index.php');
+//}
 exit;

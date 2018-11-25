@@ -3,20 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="29162f27-f0af-4383-a7c5-800735b45480" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a891b4a1-afe0-4a5e-893e-f6f3a3a191ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a891b4a1-afe0-4a5e-893e-f6f3a3a191ee.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/htdocs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/htdocs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Styles/mainStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/mainStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/family.php" beforeDir="false" afterPath="$PROJECT_DIR$/family.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/rightSidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/rightSidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/delete_post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/login_handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/meetups.php" beforeDir="false" afterPath="$PROJECT_DIR$/meetups.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos.php" beforeDir="false" afterPath="$PROJECT_DIR$/photos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post_Dao.php" beforeDir="false" afterPath="$PROJECT_DIR$/post_Dao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signUp_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/signUp_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/post_handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +55,7 @@
         <item name="heroku_e0406c39d6368ec@us-cdbr-iron-east-01.cleardb.net" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="heroku_e0406c39d6368ec: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="posts: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -68,34 +64,35 @@
     <session id="-219776272">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="103" />
           <entry key="css" value="4005" />
-          <entry key="js" value="857" />
-          <entry key="php" value="10320" />
+          <entry key="js" value="2374" />
+          <entry key="php" value="11844" />
           <entry key="sql" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="4005" />
-          <entry key="HTML" value="77" />
-          <entry key="JavaScript" value="857" />
-          <entry key="PHP" value="10243" />
+          <entry key="HTML" value="89" />
+          <entry key="JavaScript" value="2364" />
+          <entry key="PHP" value="11765" />
           <entry key="SQL" value="10" />
           <entry key="Scratch" value="103" />
         </counts>
@@ -104,21 +101,21 @@
         <counts>
           <entry key="css" value="63" />
           <entry key="jpeg" value="1" />
-          <entry key="js" value="12" />
-          <entry key="meetups" value="1" />
-          <entry key="php" value="162" />
+          <entry key="js" value="16" />
+          <entry key="meetups" value="2" />
+          <entry key="php" value="176" />
           <entry key="png" value="2" />
-          <entry key="posts" value="18" />
-          <entry key="user" value="16" />
+          <entry key="posts" value="42" />
+          <entry key="user" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="63" />
-          <entry key="Database Element" value="35" />
+          <entry key="Database Element" value="63" />
           <entry key="Image" value="3" />
-          <entry key="JavaScript" value="12" />
-          <entry key="PHP" value="162" />
+          <entry key="JavaScript" value="16" />
+          <entry key="PHP" value="176" />
         </counts>
       </usages-collector>
     </session>
@@ -128,62 +125,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+            <state relative-caret-position="280">
+              <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.php">
+        <entry file="file://$PROJECT_DIR$/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="124" column="17" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
+            <state relative-caret-position="66">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <marker date="1543177492995" expanded="true" signature="293:320" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login_handler.php">
+        <entry file="file://$PROJECT_DIR$/post_handler_AJAX.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state relative-caret-position="365">
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Styles/login.css">
+        <entry file="file://$PROJECT_DIR$/post_Dao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="91" column="15" lean-forward="true" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+            <state relative-caret-position="183">
+              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/post_Dao.php">
+        <entry file="file://$PROJECT_DIR$/meetups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Styles/mainStyles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Styles/home.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="150" column="71" selection-start-line="150" selection-start-column="71" selection-end-line="150" selection-end-column="71" />
+            <state relative-caret-position="116">
+              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -200,22 +182,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>validated</find>
-      <find>getDisplayname</find>
-      <find>showSignUp</find>
-      <find>hide</find>
-      <find>permission</find>
-      <find>$_SESSION['permission'</find>
-      <find>$_SESSION['confirmpassword'</find>
-      <find>confirmpassword</find>
-      <find>signupUsername</find>
-      <find>text</find>
-      <find>wheat</find>
       <find>f7e0aa</find>
       <find>#wheat</find>
       <find>$users</find>
       <find>\&lt;div id\=\&quot;rightSidebar\&quot;\&gt;\n            \&lt;\?php include\(\&quot;includes\/rightSidebar\.php\&quot;\)\; \?\&gt;\n        \&lt;\/div\&gt;</find>
-      <find>meetupContent</find>
       <find>postTit</find>
       <find>meet</find>
       <find>border</find>
@@ -225,11 +195,23 @@
       <find>point</find>
       <find>date_entered</find>
       <find>\&lt;li\-\-\&gt;\&lt;\?php \/\/if \(\$CURRENT_PAGE\=\=\&quot;Photos\&quot;\)\n\/\/</find>
-      <find>getUsers</find>
-      <find>postContent</find>
       <find>textarea</find>
-      <find>underline</find>
       <find>loginf</find>
+      <find>underline</find>
+      <find>[&quot;userData&quot;][&quot;displayname&quot;]</find>
+      <find>postContent</find>
+      <find>postTextArea</find>
+      <find>meetupContent</find>
+      <find>recent</find>
+      <find>removeNewPost</find>
+      <find>contentId</find>
+      <find>getUsers</find>
+      <find>contentID</find>
+      <find>date</find>
+      <find>values</find>
+      <find>savePost</find>
+      <find>console</find>
+      <find>next</find>
     </findStrings>
     <replaceStrings>
       <replace>include_once</replace>
@@ -268,33 +250,41 @@
         <option value="$PROJECT_DIR$/Styles/timeStyles.css" />
         <option value="$PROJECT_DIR$/includes/a_config.php" />
         <option value="$PROJECT_DIR$/Styles/family.css" />
-        <option value="$PROJECT_DIR$/delete_post.php" />
         <option value="$PROJECT_DIR$/permission_handler.php" />
         <option value="$PROJECT_DIR$/meetup_or_post.php" />
-        <option value="$PROJECT_DIR$/post_handler.php" />
         <option value="$PROJECT_DIR$/includes/leftSidebar.php" />
-        <option value="$PROJECT_DIR$/includes/header.php" />
         <option value="$PROJECT_DIR$/Styles/meet_ups.css" />
-        <option value="$PROJECT_DIR$/script.js" />
-        <option value="$PROJECT_DIR$/meetups.php" />
         <option value="$PROJECT_DIR$/photos.php" />
         <option value="$PROJECT_DIR$/includes/rightSidebar.php" />
         <option value="$PROJECT_DIR$/family.php" />
         <option value="$PROJECT_DIR$/includes/navigation.php" />
         <option value="$PROJECT_DIR$/login_Dao.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/signUp_handler.php" />
         <option value="$PROJECT_DIR$/Styles/mainStyles.css" />
         <option value="$PROJECT_DIR$/Styles/home.css" />
         <option value="$PROJECT_DIR$/Styles/login.css" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/login_handler.php" />
+        <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/script.js" />
+        <option value="$PROJECT_DIR$/delete_post.php" />
+        <option value="$PROJECT_DIR$/post_handler.php" />
+        <option value="$PROJECT_DIR$/post_handler_AJAX.php" />
         <option value="$PROJECT_DIR$/post_Dao.php" />
+        <option value="$PROJECT_DIR$/ajax.js" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/meetups.php" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -305,9 +295,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="640" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -316,7 +306,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -327,26 +316,32 @@
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="Styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542606346379" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542912494532" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -403,12 +398,14 @@
       <workItem from="1541022182230" duration="52027000" />
       <workItem from="1541292319422" duration="37646000" />
       <workItem from="1542159289926" duration="151000" />
-      <workItem from="1542246006684" duration="11084000" />
+      <workItem from="1542246006684" duration="11570000" />
+      <workItem from="1542817541198" duration="14314000" />
+      <workItem from="1542982286458" duration="17206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207056000" />
+    <option name="totallyTimeSpent" value="239062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -420,10 +417,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22051696" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17124394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -449,10 +446,41 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.16558966" />
+      <window_info anchor="right" id="Database" order="6" weight="0.31340873" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32956383" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.012924071" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32928944" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32928944" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49919224" weight="0.32867134" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.32582322" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32866043" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32867134" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.31340873" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32956383" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -461,171 +489,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meetups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/photos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -650,90 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/rightSidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -741,52 +524,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/signUp_handler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Styles/mainStyles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="58" column="30" lean-forward="true" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Styles/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="150" column="71" selection-start-line="150" selection-start-column="71" selection-end-line="150" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -811,10 +552,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Styles/mainStyles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Styles/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="150" column="71" selection-start-line="150" selection-start-column="71" selection-end-line="150" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/meetups" />
+    <entry file="file://$PROJECT_DIR$/includes/a_config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delete_post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a891b4a1-afe0-4a5e-893e-f6f3a3a191ee/schema/heroku_e0406c39d6368ec/table/posts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/post_Dao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="183">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_handler_AJAX.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <marker date="1543177492995" expanded="true" signature="293:320" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meetups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>
