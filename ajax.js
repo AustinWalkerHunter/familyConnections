@@ -30,8 +30,6 @@ $(function(){
                     alert("FAILURE");
                 }
             });
-            console.log(values);
-
         }
 
         else {

@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29162f27-f0af-4383-a7c5-800735b45480" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a891b4a1-afe0-4a5e-893e-f6f3a3a191ee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a891b4a1-afe0-4a5e-893e-f6f3a3a191ee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/htdocs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/htdocs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Styles/mainStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/mainStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delete_post.php" beforeDir="false" afterPath="$PROJECT_DIR$/delete_post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meetups.php" beforeDir="false" afterPath="$PROJECT_DIR$/meetups.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post_Dao.php" beforeDir="false" afterPath="$PROJECT_DIR$/post_Dao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post_handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/post_handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-    </list>
+    <list default="true" id="29162f27-f0af-4383-a7c5-800735b45480" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +71,7 @@
           <entry key="cell" value="103" />
           <entry key="css" value="4005" />
           <entry key="js" value="2374" />
-          <entry key="php" value="11844" />
+          <entry key="php" value="11852" />
           <entry key="sql" value="10" />
         </counts>
       </usages-collector>
@@ -92,7 +80,7 @@
           <entry key="CSS" value="4005" />
           <entry key="HTML" value="89" />
           <entry key="JavaScript" value="2364" />
-          <entry key="PHP" value="11765" />
+          <entry key="PHP" value="11773" />
           <entry key="SQL" value="10" />
           <entry key="Scratch" value="103" />
         </counts>
@@ -122,11 +110,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="72" />
+            <state relative-caret-position="313">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -161,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meetups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+            <state relative-caret-position="161">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -182,7 +170,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>f7e0aa</find>
       <find>#wheat</find>
       <find>$users</find>
       <find>\&lt;div id\=\&quot;rightSidebar\&quot;\&gt;\n            \&lt;\?php include\(\&quot;includes\/rightSidebar\.php\&quot;\)\; \?\&gt;\n        \&lt;\/div\&gt;</find>
@@ -211,6 +198,7 @@
       <find>values</find>
       <find>savePost</find>
       <find>console</find>
+      <find>current</find>
       <find>next</find>
     </findStrings>
     <replaceStrings>
@@ -272,8 +260,8 @@
         <option value="$PROJECT_DIR$/post_handler_AJAX.php" />
         <option value="$PROJECT_DIR$/post_Dao.php" />
         <option value="$PROJECT_DIR$/ajax.js" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/meetups.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -400,12 +388,12 @@
       <workItem from="1542159289926" duration="151000" />
       <workItem from="1542246006684" duration="11570000" />
       <workItem from="1542817541198" duration="14314000" />
-      <workItem from="1542982286458" duration="17206000" />
+      <workItem from="1542982286458" duration="17471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239062000" />
+    <option name="totallyTimeSpent" value="239327000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -636,17 +624,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/meetups.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="72" />
+        <state relative-caret-position="161">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meetups.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="313">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
         </state>
       </provider>
     </entry>
