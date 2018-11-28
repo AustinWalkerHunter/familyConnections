@@ -23,16 +23,14 @@ include("includes/a_config.php");?>
     <div id="content">
         <div class="title">
             <h2>Family Members</h2>
-            <hr>
         </div>
 
         <?php
         foreach ($users as $user) {
-            echo "<div>
-                <h4>" . htmlentities($user['displayname']) . "</h4>
+            echo "<div class='members'>
+                <h4 class='username'>" . htmlentities($user['displayname']) . "</h4>
                 <h5>Username: " . htmlentities($user['username']) . "</h5>
                 <h5>Email: " . htmlentities($user['email']) . "</h5>
-                <hr>
             </div>";
         }
         ?>

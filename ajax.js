@@ -10,6 +10,7 @@ $(function(){
         var date_entered = "Just Now";
 
 
+
         if(user !== "") {
             $.ajax({
                 type: "POST",

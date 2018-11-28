@@ -34,5 +34,7 @@ if($badForm){
     exit;
 }
 $dao->savePost($user_id, $content, $subject, $date, $contentId);
+//$_SESSION['nextContentId'] += 10;
+
 $_SESSION['message'] = "Successfully posted!";
 $_SESSION['validated'] = 'good';

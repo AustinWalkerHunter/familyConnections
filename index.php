@@ -16,6 +16,17 @@ $currentUser = htmlentities($_SESSION['userData']['displayname']);
 
 //echo "<pre>" . print_r($_SESSION,1) . "</pre>";
 
+
+
+
+
+//TODO: Multiple posts without refresh borks everything. You need keep a count on which post is which once it is new so you remove the correct postID.
+
+
+
+
+
+
 include_once("includes/a_config.php");
 ?>
 
@@ -56,7 +67,6 @@ include_once("includes/a_config.php");
                 </p>
                 <hr/>
 <!--                action="post_handler.php-->
-                <?php echo $maxContentId ?>
                 <form method="POST" id="postForm">
                         <div id="makePostContainer">
                             <input id="user" type="hidden" value="<?php echo $currentUser ?>"/>
@@ -86,9 +96,9 @@ include_once("includes/a_config.php");
                 <?php
                 $maxContentId = 0;
                 foreach ($posts as $post) {
-                    if($maxContentId < $post["content_id"]){
-                        $maxContentId = $post["content_id"];
-                    }
+//                    if($maxContentId < $post["content_id"]){
+//                        $maxContentId = $post["content_id"];
+//                    }
                     echo "<div id='postBlock" . $post['content_id'] . "' class='userPosts " . (($post['date'] != NULL) ? 'meetup' : '') . "'>
                         <p class='username'><a href=''>" . htmlentities($post['displayname']) . "</a></p>
                         " . ((($post['user_id'] === $_SESSION['userData']['id']) || ($_SESSION['userData']['username'] === "ADMIN"))
@@ -103,7 +113,8 @@ include_once("includes/a_config.php");
                         <span class='datePosted'>{$post['date_entered']}</span>
                       </div>";
                 }
-                $_SESSION['nextContentId']= $maxContentId+10;
+
+//                $_SESSION['nextContentId'] = $maxContentId;
 
                 ?>
             </div>

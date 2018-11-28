@@ -122,7 +122,16 @@ include("includes/a_config.php");?>
                 </div>
             <?php } ?>
         </div>
-        <?php include("includes/footer.php"); ?>
+        <?php include("includes/footer.php");
+        require_once 'post_Dao.php';
+        $dao = new post_Dao();
+        $posts = $dao->getPosts();
+        foreach ($posts as $post) {
+            if ($maxContentId < $post["content_id"]) {
+                $maxContentId = $post["content_id"];
+            }
+            $_SESSION['nextContentId'] = $maxContentId+10;
+        }?>
     </div>
 </body>
 
